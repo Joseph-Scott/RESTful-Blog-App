@@ -90,6 +90,19 @@ app.put("/blogs/:id", function(req, res){
   });
 });
 
+// DELETE ROUTE
+app.delete("/blogs/:id", function(req, res){
+  // Destroy blog
+  Blog.findByIdAndRemove(req.params.id, function(err){
+    if(err){
+      res.redirect("/blogs");
+    } else {
+      res.redirect("/blogs");
+    }
+  })
+  // Redirect somewhere
+});
+
 app.listen(3000, function(){
   console.log("SERVER IS RUNNING!");
 });
