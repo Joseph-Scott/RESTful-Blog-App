@@ -107,6 +107,6 @@ app.delete("/blogs/:id", function(req, res){
   // Redirect somewhere
 });
 
-app.listen(3000, function(){
-  console.log("SERVER IS RUNNING!");
-});
+// app.listen(3000, function(){
+//   console.log("SERVER IS RUNNING!");
+// });
